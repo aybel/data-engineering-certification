@@ -1,0 +1,42 @@
+{
+  "fecha_analisis": "2026-05-06 06:26:05",
+  "dataset": {
+    "nombre": "transacciones_raw.csv",
+    "filas": 105,
+    "columnas": 6
+  },
+  "calidad_datos": {
+    "duplicados_totales": 5,
+    "duplicados_por_id": 5,
+    "total_nulos": 58,
+    "porcentaje_nulos_global": 9.206349206349207
+  },
+  "problemas_por_columna": {
+    "transaction_id": {
+      "duplicados": 5
+    },
+    "customer_id": {
+      "nulos": 7,
+      "porcentaje_nulos": 6.666666666666667
+    },
+    "amount": {
+      "nulos": 7,
+      "negativos": 5,
+      "formato_string": 17,
+      "porcentaje_problemas": 27.61904761904762
+    },
+    "date": {
+      "formato_no_iso": 12,
+      "nulos": 0,
+      "porcentaje_no_iso": 11.428571428571429
+    },
+    "status": {
+      "vacios": 0,
+      "porcentaje_vacios": 0.0
+    },
+    "store": {
+      "nulos": 19,
+      "porcentaje_nulos": 18.095238095238095
+    }
+  }
+}
