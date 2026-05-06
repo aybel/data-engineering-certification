@@ -1,4 +1,27 @@
 # Curso de Ingeniería de Datos - Tareas
+# =============================================================================
+# EJERCICIO 1: Análisis de Calidad de Datos
+# Objetivo: Identificar y cuantificar todos los problemas en los datos
+# =============================================================================
+
+Contexto: Antes de construir un pipeline, necesitas entender la magnitud
+de los problemas de calidad de datos.
+
+Tareas a realizar:
+1. Lee el archivo 'transacciones_raw.csv' generado
+2. Calcula y muestra:
+   - Total de registros
+   - Total de registros únicos (sin duplicados)
+   - Cantidad y porcentaje de nulos por columna
+   - Tipos de datos actuales vs esperados
+3. Identifica transacciones con problemas específicos:
+   - Montos negativos
+   - Montos como string (con $)
+   - Fechas en formato incorrecto
+4. Genera un resumen en formato tabla
+
+Pista: Usa pandas o Python puro según prefieras
+
 
 ## Tarea 2: Limpieza y Estandarización de Datos
 **Objetivo:** Corregir todos los problemas de calidad identificados en la Tarea 1.
