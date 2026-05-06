@@ -1,0 +1,45 @@
+services:
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: data_engineer_course
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    command: start.sh jupyter lab --NotebookApp.token=''
+  
+  postgres:
+    image: postgres:15
+    container_name: course_postgres
+    environment:
+      POSTGRES_DB: dataengineering
+      POSTGRES_USER: datacourse
+      POSTGRES_PASSWORD: datacourse123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:6
+    container_name: course_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: datacourse
+      MONGO_INITDB_ROOT_PASSWORD: datacourse123
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: course_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
