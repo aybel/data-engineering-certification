@@ -1,0 +1,51 @@
+{
+  "fecha_ejecucion": "2026-05-13T23:40:47.061129",
+  "resumen_general": {
+    "total_registros": 105,
+    "total_columnas": 6
+  },
+  "analisis_nulos": {
+    "transaction_id": {
+      "nulos_antes": 0,
+      "porcentaje_antes": 0.0,
+      "nulos_despues": 0,
+      "porcentaje_despues": 0.0,
+      "mejora": 0
+    },
+    "date": {
+      "nulos_antes": 0,
+      "porcentaje_antes": 0.0,
+      "nulos_despues": 0,
+      "porcentaje_despues": 0.0,
+      "mejora": 0
+    },
+    "customer_id": {
+      "nulos_antes": 7,
+      "porcentaje_antes": 6.67,
+      "nulos_despues": 0,
+      "porcentaje_despues": 0.0,
+      "mejora": 7
+    },
+    "amount": {
+      "nulos_antes": 7,
+      "porcentaje_antes": 6.67,
+      "nulos_despues": 7,
+      "porcentaje_despues": 6.67,
+      "mejora": 0
+    },
+    "status": {
+      "nulos_antes": 25,
+      "porcentaje_antes": 23.81,
+      "nulos_despues": 0,
+      "porcentaje_despues": 0.0,
+      "mejora": 25
+    },
+    "store": {
+      "nulos_antes": 19,
+      "porcentaje_antes": 18.1,
+      "nulos_despues": 0,
+      "porcentaje_despues": 0.0,
+      "mejora": 19
+    }
+  }
+}
