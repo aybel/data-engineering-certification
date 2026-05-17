@@ -1,0 +1,31 @@
+{
+    "fecha_procesamiento": "2026-05-17 01:08:27",
+    "directorio_trabajo": "/home/jovyan/work",
+    "archivo_origen": "data/raw/transacciones_raw.csv",
+    "archivo_destino": "/home/jovyan/work/data/processed/transacciones_clean.csv",
+    "total_registros": 105,
+    "columnas": [
+        "transaction_id",
+        "date",
+        "customer_id",
+        "amount",
+        "status",
+        "store"
+    ],
+    "nulos_restantes": {
+        "transaction_id": 0,
+        "date": 0,
+        "customer_id": 0,
+        "amount": 7,
+        "status": 25,
+        "store": 0
+    },
+    "tipos_datos": {
+        "transaction_id": "object",
+        "date": "object",
+        "customer_id": "object",
+        "amount": "float64",
+        "status": "object",
+        "store": "object"
+    }
+}

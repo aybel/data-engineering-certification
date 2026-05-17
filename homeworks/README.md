@@ -37,9 +37,9 @@ Pista: Usa pandas o Python puro según prefieras
 - Generar reporte comparativo antes/después de la limpieza.
 
 ### Entregables:
-- `tarea_2/limpieza_datos.py` o notebook
-- `output/transacciones_clean.csv`
-- `output/reporte_limpieza.json`
+- `src/pipelines/limpieza_datos.py` o notebook en `notebooks/prototypes`
+- `homeworks/output/tarea_2/transacciones_clean.csv`
+- `homeworks/output/tarea_2/reporte_limpieza.json`
 
 ## Tarea 3: Manejo de Valores Nulos y Duplicados
 **Objetivo:** Implementar estrategias avanzadas para datos faltantes y eliminar duplicados.
@@ -58,9 +58,9 @@ Pista: Usa pandas o Python puro según prefieras
 - Guardar resultado como `transacciones_enriched.csv`.
 
 ### Entregables:
-- `tarea_3/manejo_nulos_duplicados.py`
-- `output/transacciones_enriched.csv`
-- `output/analisis_nulos.txt` (con justificación de estrategias)
+- `src/pipelines/manejo_nulos_duplicados.py`
+- `data/processed/transacciones_enriched.csv`
+- `homeworks/output/tarea_3/analisis_nulos.txt` (con justificación de estrategias)
 
 ## Tarea 4: Validación y Control de Calidad
 **Objetivo:** Implementar sistema de reglas de validación robusto.
@@ -85,10 +85,10 @@ Pista: Usa pandas o Python puro según prefieras
     - Estadísticas por tipo de error.
 
 ### Entregables:
-- `tarea_4/sistema_validacion.py`
-- `output/transacciones_validas.csv`
-- `output/transacciones_rechazadas.csv`
-- `output/reporte_validacion.json`
+- `src/pipelines/sistema_validacion.py`
+- `data/curated/transacciones_validas.csv`
+- `data/curated/transacciones_rechazadas.csv`
+- `homeworks/output/tarea_4/reporte_validacion.json`
 
 ## Tarea 5: KPIs y Métricas de Negocio
 **Objetivo:** Calcular indicadores clave a partir de los datos limpios.
@@ -117,9 +117,9 @@ Pista: Usa pandas o Python puro según prefieras
     - Histograma (distribución de montos)
 
 ### Entregables:
-- `tarea_5/calculadora_kpis.py`
-- `output/kpi_report.json`
-- `output/visualizaciones/` (carpeta con gráficos)
+- `src/pipelines/calculadora_kpis.py`
+- `homeworks/output/tarea_5/kpi_report.json`
+- `homeworks/output/tarea_5/visualizaciones/` (carpeta con gráficos)
 
 ## Tarea 6: Pipeline Automatizado
 **Objetivo:** Integrar todas las funciones anteriores en una clase `Pipeline` reutilizable.
@@ -141,10 +141,10 @@ Pista: Usa pandas o Python puro según prefieras
 - Manejar errores gracefully (no detener el pipeline por un registro malo).
 
 ### Entregables:
-- `tarea_6/data_pipeline.py`
-- `tarea_6/config.yaml`
-- `tarea_6/pipeline.log`
-- `output/reporte_pipeline.html`
+- `src/pipelines/data_pipeline.py`
+- `homeworks/tarea_6/config.yaml`
+- `logs/pipeline.log`
+- `homeworks/output/tarea_6/reporte_pipeline.html`
 
 ## Tarea 7: Tests Unitarios
 **Objetivo:** Asegurar que cada componente del pipeline funciona correctamente.
@@ -165,9 +165,9 @@ Pista: Usa pandas o Python puro según prefieras
 - Lograr al menos 80% de cobertura de código.
 
 ### Entregables:
-- `tarea_7/test_pipeline.py`
-- `tarea_7/coverage_report.html`
-- `tarea_7/test_results.xml`
+- `tests/test_pipeline.py`
+- `homeworks/output/tarea_7/coverage_report.html`
+- `homeworks/output/tarea_7/test_results.xml`
 
 ## Tarea 8: Proyecto Integrador Final
 **Objetivo:** Construir un pipeline completo y desplegable.
@@ -187,36 +187,20 @@ Pista: Usa pandas o Python puro según prefieras
 - (Opcional) Automatizar ejecución diaria con `schedule` o `cron`.
 
 ### Entregables:
-- `tarea_8/pipeline_final.py`
-- `tarea_8/dashboard.py` (opcional)
-- `output/final/` (todos los datasets procesados)
-- `README_PIPELINE.md`
+- `src/main.py` (integrando el pipeline final)
+- `src/dashboard.py` (opcional)
+- `data/curated/final/` (todos los datasets procesados)
+- `README.md` (actualizado con la documentación del pipeline)
 
-## Estructura de carpetas sugerida:
+## Estructura de carpetas (Referencia anterior)
 ```text
 homeworks/
 ├── data/
 │   └── transacciones_raw.csv
-├── output/
-│   ├── tarea_1/
-│   ├── tarea_2/
-│   ├── tarea_3/
-│   ├── tarea_4/
-│   ├── tarea_5/
-│   ├── tarea_6/
-│   ├── tarea_7/
-│   └── tarea_8/
-├── tarea_1/
-│   └── Tarea1_Exploracion.ipynb
-├── tarea_2/
-├── tarea_3/
-├── tarea_4/
-├── tarea_5/
-├── tarea_6/
-├── tarea_7/
-├── tarea_8/
-└── CHECKLIST_TAREAS.csv
+...
 ```
+
+> **Nota:** La estructura de carpetas anterior ha sido actualizada a una versión más profesional. Consulta el `README.md` principal para ver la nueva organización.
 
 ## Checklist de progreso
 | Tarea | Descripción | Estado | Puntos | Fecha |
