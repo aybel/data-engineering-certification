@@ -1,42 +1,54 @@
-# Proyecto de Ingeniería de Datos
+# Proyecto del Curso de Ingeniería de Datos
 
-Este repositorio contiene los materiales y ejercicios para un curso de ingeniería de datos.
-
-## Descripción
-
-El objetivo de este proyecto es proporcionar una base práctica en ingeniería de datos, cubriendo desde la limpieza y validación de datos hasta la creación de pipelines automatizados y el cálculo de KPIs.
+Este repositorio contiene las tareas, proyectos y material de estudio para el curso de Ingeniería de Datos.
 
 ## Estructura del Proyecto
 
--   `data/`: Contiene los datasets iniciales y procesados.
--   `docker-compose.yml`: Define los servicios, redes y volúmenes para el entorno de Docker.
--   `Dockerfile`: Contiene las instrucciones para construir la imagen de Docker para el entorno de desarrollo.
--   `generar_dataset.py`: Un script para generar datos de muestra para las tareas.
--   `homeworks/`: Contiene las tareas del curso. Cada tarea tiene su propia subcarpeta. El `README.md` dentro de esta carpeta tiene el detalle de cada tarea.
--   `notebooks/`: Jupyter notebooks para exploración de datos y análisis.
--   `projects/`: Proyectos integradores o finales.
--   `requirements.txt`: Lista de las dependencias de Python para el proyecto.
--   `scripts/`: Contiene scripts de utilidad, como el `entrypoint.sh` para el contenedor de Docker.
+El proyecto está organizado de la siguiente manera para seguir las mejores prácticas de la industria:
+
+```
+.
+├── data/               # Contiene todos los datasets del proyecto
+│   ├── raw/            # Datos originales, sin procesar.
+│   ├── processed/      # Datos intermedios, limpios y transformados.
+│   └── curated/        # Datos finales, listos para análisis o consumo.
+│
+├── notebooks/          # Jupyter Notebooks para exploración y prototipado.
+│   ├── exploration/    # Análisis exploratorio de datos (EDA).
+│   └── prototypes/     # Prototipos de código o modelos antes de pasarlos a scripts.
+│
+├── src/                # Código fuente principal de los pipelines y la lógica de negocio.
+│   ├── pipelines/      # Scripts que definen los pipelines de ETL.
+│   └── utils/          # Funciones de utilidad reutilizables (ej. calidad de datos, conexión).
+│
+├── tests/              # Pruebas unitarias y de integración para asegurar la calidad del código.
+│
+├── homeworks/          # Tareas y ejercicios del curso. Cada tarea en su propia carpeta.
+│
+├── clases/             # Material y notebooks directamente relacionados con las clases.
+│
+├── docker-compose.yml  # Orquestación de contenedores (ej. servicios de base de datos, etc.).
+├── Dockerfile          # Definición del entorno de ejecución en un contenedor.
+├── requirements.txt    # Dependencias de Python del proyecto.
+└── README.md           # Este archivo.
+```
 
 ## Cómo Empezar
 
-### Prerrequisitos
-
--   Docker
--   Python 3.8+
-
-### Instalación y Ejecución
-
-1.  **Construir y levantar el contenedor de Docker:**
+1.  **Clonar el repositorio:**
     ```bash
-    docker-compose up --build
+    git clone <URL-DEL-REPOSITORIO>
+    cd data-engineer-course
     ```
 
-2.  **Generar el dataset inicial:**
-    Ejecuta el siguiente comando en tu terminal para generar el archivo `transacciones_raw.csv` en la carpeta `homeworks/data/`.
+2.  **Crear un entorno virtual e instalar dependencias:**
     ```bash
-    python generar_dataset.py
+    python -m venv .venv
+    source .venv/bin/activate  # En Windows: .venv\Scripts\activate
+    pip install -r requirements.txt
     ```
 
-3.  **Acceder al entorno:**
-    Puedes acceder a los servicios definidos en `docker-compose.yml`, como un Jupyter Lab o un shell dentro del contenedor.
+3.  **Ejecutar un pipeline (Ejemplo):**
+    ```bash
+    python src/main.py --pipeline=nombre_del_pipeline
+    ```
