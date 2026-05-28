@@ -8,7 +8,7 @@
 de los problemas de calidad de datos.
 
 ### Tareas a realizar:
-1. Lee el archivo 'transacciones_raw.csv' generado
+1. Lee el archivo '.csv' generado
 2. Calcula y muestra:
    - Total de registros
    - Total de registros únicos (sin duplicados)

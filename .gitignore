@@ -6,3 +6,4 @@ __pycache__/
 *.ipynb_checkpoints
 .DS_Store
 postgres_data/
+data/raw/Motor_Vehicle_Collisions_-_Crashes.csv

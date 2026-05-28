@@ -2,6 +2,7 @@ services:
   jupyter:
     image: jupyter/datascience-notebook:latest
     container_name: data_engineer_course
+    working_dir: /home/jovyan/work
     ports:
       - "8888:8888"
     volumes:
@@ -9,7 +10,7 @@ services:
     environment:
       - JUPYTER_ENABLE_LAB=yes
       - GRANT_SUDO=yes
-    command: start.sh jupyter lab --NotebookApp.token=''
+    command: start.sh jupyter lab --NotebookApp.token='' --ServerApp.root_dir=/home/jovyan/work --ServerApp.preferred_dir=/home/jovyan/work
   
   postgres:
     image: postgres:15

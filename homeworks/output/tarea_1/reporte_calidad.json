@@ -1,42 +1,360 @@
 {
-  "fecha_analisis": "2026-05-06 06:26:05",
-  "dataset": {
-    "nombre": "transacciones_raw.csv",
-    "filas": 105,
-    "columnas": 6
+  "fecha_analisis": "2026-05-28 17:01:37",
+  "archivo_analizado": "data/raw/ventas.csv",
+  "totales": {
+    "registros": 20000,
+    "registros_unicos": 20000,
+    "columnas": 31
   },
-  "calidad_datos": {
-    "duplicados_totales": 5,
-    "duplicados_por_id": 5,
-    "total_nulos": 58,
-    "porcentaje_nulos_global": 9.206349206349207
-  },
-  "problemas_por_columna": {
-    "transaction_id": {
-      "duplicados": 5
+  "nulos_por_columna": [
+    {
+      "columna": "metodo_pago",
+      "nulos": 6610,
+      "porcentaje_nulos": 33.05
     },
-    "customer_id": {
-      "nulos": 7,
-      "porcentaje_nulos": 6.666666666666667
+    {
+      "columna": "ranking_ciudad_mes",
+      "nulos": 4669,
+      "porcentaje_nulos": 23.34
     },
-    "amount": {
-      "nulos": 7,
-      "negativos": 5,
-      "formato_string": 17,
-      "porcentaje_problemas": 27.61904761904762
+    {
+      "columna": "margen_beneficio",
+      "nulos": 4078,
+      "porcentaje_nulos": 20.39
     },
-    "date": {
-      "formato_no_iso": 12,
+    {
+      "columna": "canal_venta",
+      "nulos": 4058,
+      "porcentaje_nulos": 20.29
+    },
+    {
+      "columna": "categoria",
+      "nulos": 4026,
+      "porcentaje_nulos": 20.13
+    },
+    {
+      "columna": "categoria_cliente",
+      "nulos": 4008,
+      "porcentaje_nulos": 20.04
+    },
+    {
+      "columna": "estado",
+      "nulos": 4004,
+      "porcentaje_nulos": 20.02
+    },
+    {
+      "columna": "cupon_usado",
+      "nulos": 3790,
+      "porcentaje_nulos": 18.95
+    },
+    {
+      "columna": "region",
+      "nulos": 3387,
+      "porcentaje_nulos": 16.93
+    },
+    {
+      "columna": "ciudad",
+      "nulos": 3387,
+      "porcentaje_nulos": 16.93
+    },
+    {
+      "columna": "promocion_aplicada",
+      "nulos": 3353,
+      "porcentaje_nulos": 16.76
+    },
+    {
+      "columna": "vendedor_id",
+      "nulos": 3352,
+      "porcentaje_nulos": 16.76
+    },
+    {
+      "columna": "vendedor_experiencia_meses",
+      "nulos": 3352,
+      "porcentaje_nulos": 16.76
+    },
+    {
+      "columna": "producto",
+      "nulos": 2000,
+      "porcentaje_nulos": 10.0
+    },
+    {
+      "columna": "monto_total",
+      "nulos": 684,
+      "porcentaje_nulos": 3.42
+    },
+    {
+      "columna": "costo_unitario",
+      "nulos": 617,
+      "porcentaje_nulos": 3.08
+    },
+    {
+      "columna": "cliente_id",
+      "nulos": 492,
+      "porcentaje_nulos": 2.46
+    },
+    {
+      "columna": "cantidad",
+      "nulos": 304,
+      "porcentaje_nulos": 1.52
+    },
+    {
+      "columna": "descuento",
       "nulos": 0,
-      "porcentaje_no_iso": 11.428571428571429
+      "porcentaje_nulos": 0.0
     },
-    "status": {
-      "vacios": 0,
-      "porcentaje_vacios": 0.0
+    {
+      "columna": "acumulado_mes_producto",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
     },
-    "store": {
-      "nulos": 19,
-      "porcentaje_nulos": 18.095238095238095
+    {
+      "columna": "fecha_registro_cliente",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "tiempo_entrega_dias",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "puntuacion_cliente",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "año",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "mes",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "cliente_antiguedad_dias",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "dia_semana",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "semana_numero",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "fecha",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "precio_unitario",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
+    },
+    {
+      "columna": "id_venta",
+      "nulos": 0,
+      "porcentaje_nulos": 0.0
     }
-  }
+  ],
+  "tipos": [
+    {
+      "columna": "id_venta",
+      "tipo_actual": "int64",
+      "tipo_esperado": "int64"
+    },
+    {
+      "columna": "fecha",
+      "tipo_actual": "object",
+      "tipo_esperado": "datetime64[ns]"
+    },
+    {
+      "columna": "año",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "mes",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "dia_semana",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "semana_numero",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "producto",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "categoria",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "cantidad",
+      "tipo_actual": "object",
+      "tipo_esperado": "int64"
+    },
+    {
+      "columna": "precio_unitario",
+      "tipo_actual": "object",
+      "tipo_esperado": "float64"
+    },
+    {
+      "columna": "descuento",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "monto_total",
+      "tipo_actual": "object",
+      "tipo_esperado": "float64"
+    },
+    {
+      "columna": "costo_unitario",
+      "tipo_actual": "float64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "margen_beneficio",
+      "tipo_actual": "float64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "estado",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "ciudad",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "region",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "metodo_pago",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "canal_venta",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "cliente_id",
+      "tipo_actual": "object",
+      "tipo_esperado": "object"
+    },
+    {
+      "columna": "categoria_cliente",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "cliente_antiguedad_dias",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "vendedor_id",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "vendedor_experiencia_meses",
+      "tipo_actual": "float64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "promocion_aplicada",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "cupon_usado",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "puntuacion_cliente",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "tiempo_entrega_dias",
+      "tipo_actual": "int64",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "fecha_registro_cliente",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "acumulado_mes_producto",
+      "tipo_actual": "object",
+      "tipo_esperado": "N/A"
+    },
+    {
+      "columna": "ranking_ciudad_mes",
+      "tipo_actual": "float64",
+      "tipo_esperado": "N/A"
+    }
+  ],
+  "problemas_especificos": {
+    "columna_monto": "monto_total",
+    "columna_fecha": "fecha",
+    "montos_negativos": 2809,
+    "montos_string_con_$": 0,
+    "fechas_formato_incorrecto": 4000
+  },
+  "resumen": [
+    {
+      "metrica": "total_registros",
+      "valor": 20000
+    },
+    {
+      "metrica": "total_registros_unicos",
+      "valor": 20000
+    },
+    {
+      "metrica": "total_columnas",
+      "valor": 31
+    },
+    {
+      "metrica": "total_nulos",
+      "valor": 56171
+    },
+    {
+      "metrica": "montos_negativos",
+      "valor": 2809
+    },
+    {
+      "metrica": "montos_string_con_$",
+      "valor": 0
+    },
+    {
+      "metrica": "fechas_formato_incorrecto",
+      "valor": 4000
+    }
+  ]
 }
