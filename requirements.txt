@@ -48,6 +48,7 @@ pre-commit==3.3.3
 
 # Utilities
 python-dotenv==1.0.0
+googletrans==4.0.0-rc1
 click==8.1.6
 tqdm==4.65.0
 requests==2.31.0

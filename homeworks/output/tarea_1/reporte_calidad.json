@@ -1,6 +1,6 @@
 {
-  "fecha_analisis": "2026-05-28 17:01:37",
-  "archivo_analizado": "data/raw/ventas.csv",
+  "fecha_analisis": "2026-06-02 20:29:39",
+  "archivo_analizado": "/home/jovyan/work/data/raw/ventas.csv",
   "totales": {
     "registros": 20000,
     "registros_unicos": 20000,
