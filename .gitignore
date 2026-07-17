@@ -7,3 +7,5 @@ __pycache__/
 .DS_Store
 postgres_data/
 data/raw
+projects/nyc-accidents/data/raw/*.csv
+projects/nyc-accidents/data/raw/*.xlsx
