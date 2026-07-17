@@ -1,5 +1,4 @@
-# Curso de Ingeniería de Datos - Tareas
-
+# Entorno de Desarrollo para Ingeniería de Datos
 
 # Tarea 1: Análisis de Calidad de Datos
 **Objetivo:** Identificar y cuantificar todos los problemas en los datos

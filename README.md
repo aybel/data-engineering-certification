@@ -1,6 +1,6 @@
-# Proyecto del Curso de Ingeniería de Datos
+# Entorno de Desarrollo para Ingeniería de Datos
 
-Este repositorio contiene las tareas, proyectos y material de estudio para el curso de Ingeniería de Datos.
+Este repositorio contiene una estructura de Data lab 
 
 ## Estructura del Proyecto
 
