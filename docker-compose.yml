@@ -1,16 +1,19 @@
 services:
   jupyter:
-    image: jupyter/datascience-notebook:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: data-engineering-certification:latest
     container_name: data_engineer_course
-    working_dir: /home/jovyan/work
+    working_dir: /workspace
     ports:
       - "8888:8888"
+      - "4040:4040"
     volumes:
-      - ./:/home/jovyan/work
+      - ./:/workspace
     environment:
       - JUPYTER_ENABLE_LAB=yes
-      - GRANT_SUDO=yes
-    command: start.sh jupyter lab --NotebookApp.token='' --ServerApp.root_dir=/home/jovyan/work --ServerApp.preferred_dir=/home/jovyan/work
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' --ServerApp.root_dir=/workspace --ServerApp.preferred_dir=/workspace
   
   postgres:
     image: postgres:15
