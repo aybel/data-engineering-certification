@@ -1,0 +1,140 @@
+{
+    "CRASH DATE": {
+        "descripcion": "Fecha del accidente en formato MM/DD/YYYY",
+        "tipo_dato": "Temporal",
+        "relevancia": "Alta",
+        "observaciones": "Se usará para análisis de series temporales (mes, día, hora)"
+    },
+    "CRASH TIME": {
+        "descripcion": "Hora del accidente en formato HH:MM",
+        "tipo_dato": "Temporal",
+        "relevancia": "Alta",
+        "observaciones": "Se usará para identificar horas pico de accidentes"
+    },
+    "BOROUGH": {
+        "descripcion": "Distrito de NYC (MANHATTAN, BROOKLYN, QUEENS, BRONX, STATEN ISLAND)",
+        "tipo_dato": "Categórica",
+        "relevancia": "Alta",
+        "observaciones": "Clave para análisis geográfico. Tiene ~30% nulos, se imputará con 'DESCONOCIDO'"
+    },
+    "ZIP CODE": {
+        "descripcion": "Código postal de la ubicación del accidente",
+        "tipo_dato": "Categórica",
+        "relevancia": "Media",
+        "observaciones": "Permite análisis más granular que BOROUGH"
+    },
+    "LATITUDE": {
+        "descripcion": "Coordenada de latitud del accidente",
+        "tipo_dato": "Numérica (Geoespacial)",
+        "relevancia": "Alta",
+        "observaciones": "Esencial para mapas. Se usará con LONGITUDE"
+    },
+    "LONGITUDE": {
+        "descripcion": "Coordenada de longitud del accidente",
+        "tipo_dato": "Numérica (Geoespacial)",
+        "relevancia": "Alta",
+        "observaciones": "Esencial para mapas. Se usará con LATITUDE"
+    },
+    "LOCATION": {
+        "descripcion": "Duplicado de LATITUDE y LONGITUDE en formato texto",
+        "tipo_dato": "Texto",
+        "relevancia": "Baja",
+        "observaciones": "Se descartará por ser redundante"
+    },
+    "ON STREET NAME": {
+        "descripcion": "Nombre de la calle donde ocurrió el accidente",
+        "tipo_dato": "Categórica",
+        "relevancia": "Media",
+        "observaciones": "Útil para análisis de intersecciones, pero con muchos nulos"
+    },
+    "CROSS STREET NAME": {
+        "descripcion": "Nombre de la calle que cruza (intersección)",
+        "tipo_dato": "Categórica",
+        "relevancia": "Media",
+        "observaciones": "Útil para identificar intersecciones peligrosas"
+    },
+    "OFF STREET NAME": {
+        "descripcion": "Nombre de la calle fuera de la vía principal",
+        "tipo_dato": "Categórica",
+        "relevancia": "Baja",
+        "observaciones": "Muy pocos datos (menos del 20%). Se puede descartar"
+    },
+    "NUMBER OF PERSONS INJURED": {
+        "descripcion": "Número total de personas heridas en el accidente",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Variable objetivo para severidad. Rango: 0-43"
+    },
+    "NUMBER OF PERSONS KILLED": {
+        "descripcion": "Número total de personas fallecidas en el accidente",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Variable objetivo para severidad (eventos raros)"
+    },
+    "NUMBER OF PEDESTRIANS INJURED": {
+        "descripcion": "Número de peatones heridos",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Desglose por tipo de usuario"
+    },
+    "NUMBER OF PEDESTRIANS KILLED": {
+        "descripcion": "Número de peatones fallecidos",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Eventos raros pero críticos"
+    },
+    "NUMBER OF CYCLIST INJURED": {
+        "descripcion": "Número de ciclistas heridos",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Desglose por tipo de usuario"
+    },
+    "NUMBER OF CYCLIST KILLED": {
+        "descripcion": "Número de ciclistas fallecidos",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Eventos raros pero críticos"
+    },
+    "NUMBER OF MOTORIST INJURED": {
+        "descripcion": "Número de conductores/ocupantes heridos",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Desglose por tipo de usuario"
+    },
+    "NUMBER OF MOTORIST KILLED": {
+        "descripcion": "Número de conductores/ocupantes fallecidos",
+        "tipo_dato": "Numérica",
+        "relevancia": "Alta",
+        "observaciones": "Eventos raros pero críticos"
+    },
+    "CONTRIBUTING FACTOR VEHICLE 1": {
+        "descripcion": "Factor que contribuyó al accidente (vehículo principal)",
+        "tipo_dato": "Categórica",
+        "relevancia": "Alta",
+        "observaciones": "Clave para identificar causas. Solo el factor 1 es relevante (los demás tienen >98% nulos)."
+    },
+    "CONTRIBUTING FACTOR VEHICLE 2-5": {
+        "descripcion": "Factores contribuyentes de vehículos adicionales (2-5)",
+        "tipo_dato": "Categórica",
+        "relevancia": "Baja",
+        "observaciones": "Más del 95% nulos. Se descartarán para el análisis general."
+    },
+    "VEHICLE TYPE CODE 1": {
+        "descripcion": "Tipo de vehículo principal involucrado (ej. SEDAN, TAXI, BUS)",
+        "tipo_dato": "Categórica",
+        "relevancia": "Media-Alta",
+        "observaciones": "Clave para análisis por tipo de vehículo. Solo el código 1 es relevante."
+    },
+    "VEHICLE TYPE CODE 2-5": {
+        "descripcion": "Tipo de vehículos adicionales (2-5)",
+        "tipo_dato": "Categórica",
+        "relevancia": "Baja",
+        "observaciones": "Más del 95% nulos. Se descartarán para el análisis general."
+    },
+    "COLLISION_ID": {
+        "descripcion": "Identificador único del accidente",
+        "tipo_dato": "Numérica",
+        "relevancia": "Media",
+        "observaciones": "Clave primaria. No se usa para análisis predictivo."
+    }
+}
