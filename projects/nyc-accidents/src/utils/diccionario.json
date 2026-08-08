@@ -1,0 +1,128 @@
+{
+  "VEHICLE_TYPE_CODE_1": {
+    "descripcion": "Tipo de vehículo principal involucrado en el accidente.",
+    "tipo_dato": "Categórica",
+    "valores_unicos_ejemplo": ["SEDAN", "TAXI", "BUS", "BIKE"],
+    "relevancia": "Alta",
+    "observaciones": "Es la única columna de tipo de vehículo con datos significativos. Las columnas VEHICLE TYPE CODE 2-5 tienen >95% de nulos y se recomienda descartarlas."
+  },
+  "CONTRIBUTING_FACTOR_VEHICLE_1": {
+    "descripcion": "Factor que contribuyó al accidente para el vehículo principal.",
+    "tipo_dato": "Categórica",
+    "valores_unicos_ejemplo": ["Unspecified", "Driver Inattention/Distraction", "Following Too Closely"],
+    "relevancia": "Alta",
+    "observaciones": "Es la única columna de factor contribuyente con datos significativos. Las columnas CONTRIBUTING FACTOR VEHICLE 2-5 tienen >95% de nulos y se recomienda descartarlas."
+  },
+  "LOCATION": {
+    "descripcion": "Coordenadas en formato de texto (latitud, longitud).",
+    "tipo_dato": "Texto",
+    "valores_unicos_ejemplo": ["(40.62, -73.97)", "(0.0, 0.0)"],
+    "relevancia": "Baja",
+    "observaciones": "Es redundante. Las mismas coordenadas están en LATITUDE y LONGITUDE. Se recomienda descartar esta columna."
+  },
+  "BOROUGH": {
+    "descripcion": "Distrito de la ciudad de Nueva York donde ocurrió el accidente.",
+    "tipo_dato": "Categórica",
+    "valores_unicos_ejemplo": ["MANHATTAN", "BROOKLYN", "QUEENS", "BRONX", "STATEN ISLAND"],
+    "relevancia": "Alta",
+    "observaciones": "Columna clave para análisis geográfico. Tiene ~30% de nulos; se puede imputar con 'DESCONOCIDO'."
+  },
+  "ZIP_CODE": {
+    "descripcion": "Código postal de la ubicación del accidente.",
+    "tipo_dato": "Categórica",
+    "valores_unicos_ejemplo": ["11230", "10001", "11385"],
+    "relevancia": "Media",
+    "observaciones": "Permite análisis más granular que BOROUGH. Tiene ~30% de nulos."
+  },
+  "CRASH_DATE": {
+    "descripcion": "Fecha del accidente en formato MM/DD/YYYY.",
+    "tipo_dato": "Temporal",
+    "valores_unicos_ejemplo": ["01/21/2014", "03/26/2022"],
+    "relevancia": "Alta",
+    "observaciones": "Esencial para análisis de series temporales."
+  },
+  "CRASH_TIME": {
+    "descripcion": "Hora del accidente en formato HH:MM.",
+    "tipo_dato": "Temporal",
+    "valores_unicos_ejemplo": ["16:00", "14:30"],
+    "relevancia": "Alta",
+    "observaciones": "Esencial para análisis de horas pico."
+  },
+  "LATITUDE": {
+    "descripcion": "Coordenada de latitud del accidente.",
+    "tipo_dato": "Numérica (Geoespacial)",
+    "valores_unicos_ejemplo": [40.62179, 40.667202],
+    "relevancia": "Alta",
+    "observaciones": "Esencial para mapas y análisis espacial."
+  },
+  "LONGITUDE": {
+    "descripcion": "Coordenada de longitud del accidente.",
+    "tipo_dato": "Numérica (Geoespacial)",
+    "valores_unicos_ejemplo": [-73.970024, -73.8665],
+    "relevancia": "Alta",
+    "observaciones": "Esencial para mapas y análisis espacial."
+  },
+  "NUMBER_OF_PERSONS_INJURED": {
+    "descripcion": "Número total de personas heridas en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 43],
+    "relevancia": "Alta",
+    "observaciones": "Variable objetivo para medir severidad. Rango: 0-43."
+  },
+  "NUMBER_OF_PERSONS_KILLED": {
+    "descripcion": "Número total de personas fallecidas en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 8],
+    "relevancia": "Alta",
+    "observaciones": "Variable objetivo para medir severidad (eventos raros)."
+  },
+  "NUMBER_OF_PEDESTRIANS_INJURED": {
+    "descripcion": "Número de peatones heridos en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 27],
+    "relevancia": "Alta",
+    "observaciones": "Desglose por tipo de usuario."
+  },
+  "NUMBER_OF_PEDESTRIANS_KILLED": {
+    "descripcion": "Número de peatones fallecidos en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 6],
+    "relevancia": "Alta",
+    "observaciones": "Eventos raros pero críticos."
+  },
+  "NUMBER_OF_CYCLIST_INJURED": {
+    "descripcion": "Número de ciclistas heridos en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 4],
+    "relevancia": "Alta",
+    "observaciones": "Desglose por tipo de usuario."
+  },
+  "NUMBER_OF_CYCLIST_KILLED": {
+    "descripcion": "Número de ciclistas fallecidos en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2],
+    "relevancia": "Alta",
+    "observaciones": "Eventos raros pero críticos."
+  },
+  "NUMBER_OF_MOTORIST_INJURED": {
+    "descripcion": "Número de conductores/ocupantes heridos en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 43],
+    "relevancia": "Alta",
+    "observaciones": "Desglose por tipo de usuario."
+  },
+  "NUMBER_OF_MOTORIST_KILLED": {
+    "descripcion": "Número de conductores/ocupantes fallecidos en el accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [0, 1, 2, 5],
+    "relevancia": "Alta",
+    "observaciones": "Eventos raros pero críticos."
+  },
+  "COLLISION_ID": {
+    "descripcion": "Identificador único del accidente.",
+    "tipo_dato": "Numérica",
+    "valores_unicos_ejemplo": [4455765, 4675373],
+    "relevancia": "Media",
+    "observaciones": "Clave primaria. No se usa para análisis predictivo."
+  }
+}
