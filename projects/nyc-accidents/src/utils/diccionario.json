@@ -124,5 +124,75 @@
     "valores_unicos_ejemplo": [4455765, 4675373],
     "relevancia": "Media",
     "observaciones": "Clave primaria. No se usa para análisis predictivo."
+  },
+    "VEHICLE TYPE CODE 1": {
+    "descripcion": "Clase o tipo de carrocería del primer vehículo involucrado en el accidente.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Sedan", "SPORT UTILITY / STATION WAGON", "Taxi", "Pick-up Truck"],
+    "relevancia": "Alta",
+    "observaciones": "Es la columna de tipo de vehículo más completa. Crucial para segmentar accidentes por tipo de transporte."
+  },
+  "CONTRIBUTING FACTOR VEHICLE 1": {
+    "descripcion": "Causa principal o error atribuido al primer vehículo que detonó el accidente.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Driver Inattention/Distraction", "Failure to Yield Right-of-Way", "Unsafe Speed"],
+    "relevancia": "Alta",
+    "observaciones": "Representa el factor principal del siniestro. Se recomienda estandarizar mayúsculas/minúsculas antes de agrupar."
+  },
+  "VEHICLE TYPE CODE 2": {
+    "descripcion": "Clase o tipo de carrocería del segundo vehículo involucrado en el accidente.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Sedan", "Bike", "Box Truck", "Motorcycle"],
+    "relevancia": "Alta",
+    "observaciones": "Contiene algunos valores nulos si el accidente fue contra un objeto fijo o un peatón (atropello)."
+  },
+  "CONTRIBUTING FACTOR VEHICLE 2": {
+    "descripcion": "Causa o factor asociado al comportamiento del segundo vehículo en la colisión.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Unspecified", "Following Too Closely", "Driver Inexperience"],
+    "relevancia": "Media",
+    "observaciones": "El valor 'Unspecified' es muy común aquí cuando el segundo vehículo fue la víctima pasiva del choque."
+  },
+  "VEHICLE TYPE CODE 3": {
+    "descripcion": "Clase o tipo de carrocería del tercer vehículo involucrado (choques múltiples o en cadena).",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Sedan", "Station Wagon/Sport Utility Vehicle"],
+    "relevancia": "Media",
+    "observaciones": "Alto porcentaje de valores nulos (superior al 80%). Solo se llena en colisiones múltiples."
+  },
+  "CONTRIBUTING FACTOR VEHICLE 3": {
+    "descripcion": "Causa o factor asociado al comportamiento del tercer vehículo involucrado.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Unspecified", "Reaction to Uninvolved Vehicle"],
+    "relevancia": "Baja",
+    "observaciones": "Alto porcentaje de valores nulos. Útil únicamente para estudios específicos de carambolas vehiculares."
+  },
+  "VEHICLE TYPE CODE 4": {
+    "descripcion": "Clase o tipo de carrocería del cuarto vehículo involucrado en el accidente.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Sedan", "Pick-up Truck"],
+    "relevancia": "Baja",
+    "observaciones": "Porcentaje de valores nulos extremadamente alto (típicamente >95%)."
+  },
+  "CONTRIBUTING FACTOR VEHICLE 4": {
+    "descripcion": "Causa o factor asociado al comportamiento del cuarto vehículo involucrado.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Unspecified", "Other Electronic Device"],
+    "relevancia": "Baja",
+    "observaciones": "Casi su totalidad son valores nulos debido a la rareza de choques de cuatro o más autos."
+  },
+  "VEHICLE TYPE CODE 5": {
+    "descripcion": "Clase o tipo de carrocería del quinto vehículo involucrado en el accidente.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Sedan", "Bus"],
+    "relevancia": "Baja",
+    "observaciones": "Columna muy dispersa. Casi el 99% de las filas estarán vacías."
+  },
+  "CONTRIBUTING FACTOR VEHICLE 5": {
+    "descripcion": "Causa o factor asociado al comportamiento del quinto vehículo involucrado.",
+    "tipo_dato": "Categoría (Texto)",
+    "valores_unicos_ejemplo": ["Unspecified", "View Obstructed/Limited"],
+    "relevancia": "Baja",
+    "observaciones": "Se puede ignorar en análisis generales de causa-efecto debido a su extrema escasez de datos."
   }
 }

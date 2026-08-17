@@ -16,6 +16,7 @@ Analizar los accidentes de tráfico en Nueva York para identificar patrones temp
 - [ ] Identificar columnas con nulos y decidir tratamiento
 - [ ] Convertir fechas a datetime y extraer hora, día, mes
 - [ ] Filtrar registros sin coordenadas
+- [ ] Generar diccionario de los tipos de vehiculo
 
 ### Fase 2: Análisis exploratorio (Día 2)
 - [ ] Crear mapa de calor de accidentes con `folium`
