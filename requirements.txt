@@ -60,3 +60,9 @@ gitpython==3.1.32
 # APIs
 fastapi==0.100.0
 uvicorn==0.23.1
+
+# mapas de calor
+folium
+
+# Geolocalizaciṕm
+geopy==2.4.1

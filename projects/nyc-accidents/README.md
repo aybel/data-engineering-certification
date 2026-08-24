@@ -20,7 +20,7 @@ Analizar los accidentes de tráfico en Nueva York para identificar patrones temp
 
 ### Fase 2: Análisis exploratorio (Día 2)
 - [ ] Crear mapa de calor de accidentes con `folium`
-- [ ] Analizar distribución temporal (hora, día, mes)
+- [ ] Analizar distribución temporal (hora, día, mes)pe
 - [ ] Identificar factores contribuyentes más comunes
 - [ ] Explorar relación entre tipo de vehículo y severidad
 
