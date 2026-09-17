@@ -18,11 +18,21 @@ Analizar los accidentes de tráfico en Nueva York para identificar patrones temp
 - [ ] Filtrar registros sin coordenadas
 - [ ] Generar diccionario de los tipos de vehiculo
 
+
 ### Fase 2: Análisis exploratorio (Día 2)
 - [ ] Crear mapa de calor de accidentes con `folium`
 - [ ] Analizar distribución temporal (hora, día, mes)pe
 - [ ] Identificar factores contribuyentes más comunes
 - [ ] Explorar relación entre tipo de vehículo y severidad
+
+### Fase 2.5: Almacenamiento en base de datos (Dia2)
+- [ ] Crear tabla accidentes en PostgreSql
+- [ ] Crear datos limios con `pandas.to_sql()`
+- [ ] Crear indices en columnas de filtrado frecuente (BOROUUGH, CRASH_DATA)
+- [ ] Escribir queris de agrupación
+    - Accidentes por localidad y hora pico
+    - Top 10 Factora contribuyentes
+    - Severidad promedio por tipo de vehiculo
 
 ### Fase 3: Feature Engineering y modelado (Día 3-4)
 - [ ] Crear variable objetivo (severidad del accidente)

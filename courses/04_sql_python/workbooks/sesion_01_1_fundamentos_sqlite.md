@@ -1,8 +1,8 @@
 # 📓 WORKBOOK - SESIÓN 1.1
 ## Fundamentos y Modelado de Datos - SQLite
 
-**Curso:** Bases de Datos y SQL con Python | BSG Institute  
-**Fecha:** 11/08/2026  
+**Curso:** Bases de Datos y SQL con Python | BSG Institute
+**Fecha:** 11/08/2026
 **Duración:** 2 horas (Sesión 1 de 14)
 
 ---
@@ -200,3 +200,92 @@ print(f"Transacciones en la base: {total}")
 
 # 6. CERRAR CONEXIÓN
 conexion.close()
+```
+
+**Resultado:**
+```
+Transacciones en la base: 1
+```
+
+> ⚠️ **Apunte clave:** El `commit()` es lo que guarda los cambios en el archivo. Sin `commit()`, el registro se pierde al cerrar la conexión.
+
+---
+
+## 6. PREPARACIÓN DEL ENTORNO
+
+### ✅ Lo que ya tienes en tu Data Lab
+
+| Componente | Estado |
+|------------|--------|
+| **Python 3.11** | ✅ |
+| **pip** | ✅ |
+| **Docker** | ✅ |
+| **JupyterLab** | ✅ |
+| **pandas** | ✅ |
+| **polars** | ✅ |
+| **sqlite3** | ✅ (viene con Python) |
+
+### 🚀 Pasos para Organizar el Repositorio
+
+```bash
+# 1. Crear la carpeta del curso
+cd ~/data-engineering-certification
+mkdir -p courses/04_sql_python/{notebooks,scripts,data/raw}
+
+# 2. Mover archivos del curso
+cp ~/Downloads/c1_s1_b1_instalacion.md courses/04_sql_python/
+cp ~/Downloads/c1_s1_b2_generar_datos.py courses/04_sql_python/scripts/
+cp ~/Downloads/pagos_plano.csv courses/04_sql_python/data/raw/
+cp ~/Downloads/pagos.db courses/04_sql_python/
+```
+
+---
+
+## 7. FICHA DE SQLITE
+
+| # | Punto | SQLite |
+|---|-------|--------|
+| **1** | **Modelo de datos que asume** | Relacional (tablas con columnas y filas) |
+| **2** | **Operaciones eficientes** | Lecturas, consultas simples, CRUD básico |
+| **3** | **Garantías de consistencia** | ACID completo (Atomicidad, Consistencia, Aislamiento, Durabilidad) |
+| **4** | **Costo escritura vs lectura** | Escritura costosa (bloquea toda la BD); lectura barata |
+| **5** | **Interfaz desde Python** | `sqlite3` (biblioteca estándar) + `pandas.read_sql_query()` |
+| **6** | **Conviene / No conviene** | ✅ Prototipos, móvil, pruebas unitarias<br>❌ Alta concurrencia, grandes volúmenes, producción pesada |
+
+---
+
+## 8. RESUMEN DE LA SESIÓN
+
+### 📌 Lecciones Aprendidas
+
+1. **Existen diferentes familias de bases de datos** porque cada una resuelve un problema específico.
+2. **La ficha de 6 puntos** es el método transversal para evaluar cada motor.
+3. **SQLite es el motor más simple** para empezar: sin servidor, sin configuración, en un archivo.
+4. **La DB-API 2.0** es el estándar que uniforma la conexión desde Python.
+5. **El caso de estudio (procesadora de pagos)** será el hilo conductor de todo el curso.
+
+### 🗂️ Archivos Generados en la Sesión
+
+```
+📁 courses/04_sql_python/
+├── 📄 pagos.db                  # Base de datos SQLite
+├── 📄 README.md                 # Documentación del curso
+├── 📁 data/raw/
+│   └── 📄 pagos_plano.csv       # Extracto operativo plano
+└── 📁 scripts/
+    ├── 📄 c1_s1_b2_generar_datos.py
+    └── 📄 c1_s1_b3_primer_contacto.py
+```
+
+### 🎯 Preparado para la Próxima Sesión (1.2)
+
+- ✅ Entorno de trabajo listo
+- ✅ Datos cargados en SQLite
+- ✅ Conexión verificada desde Python
+- ✅ Ficha de SQLite completada
+
+---
+
+**Nota final:** *"SQLite es el cuaderno de notas de las bases de datos. No es para producción pesada, pero es perfecto para aprender, para probar ideas, y para proyectos pequeños. Cuando necesites más, saltas a PostgreSQL. Pero sin SQLite, no entenderías los fundamentos."*
+
+---
