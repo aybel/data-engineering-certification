@@ -25,13 +25,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Crear directorio de trabajo
 WORKDIR /workspace
 
-# Copiar requirements.txt e instalar dependencias de Python
-COPY requirements.txt .
+# Copiar los requirements e instalar dependencias de Python (base + desarrollo)
+COPY requirements.txt requirements-dev.txt ./
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements-dev.txt
 
 # Exponer puertos
-EXPOSE 8888 4040
+EXPOSE 8888
 
-# Comando por defecto
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--ServerApp.root_dir=/workspace"]
+# Comando por defecto (docker-compose.yml no lo redefine)
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--IdentityProvider.token=", "--ServerApp.root_dir=/workspace", "--ServerApp.preferred_dir=/workspace"]

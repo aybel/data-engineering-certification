@@ -1,0 +1,10 @@
+-r ../../requirements.txt
+
+# Sesiones 3.1 y 3.2: orquestación con Airflow.
+# Instálalo con el archivo de constraints oficial para evitar conflictos de versiones:
+#   pip install "apache-airflow==2.7.1" \
+#     --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.7.1/constraints-3.11.txt"
+apache-airflow==2.7.1
+
+# Sesión 3.3: Spark. Requiere Java 11 o 17 en el sistema (la imagen de Docker no lo incluye).
+pyspark==3.4.1

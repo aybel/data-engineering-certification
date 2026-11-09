@@ -1,0 +1,11 @@
+.git
+.venv
+.venv-*
+**/__pycache__
+**/.ipynb_checkpoints
+# Los datasets se montan como volumen; no hace falta enviarlos al build
+data/
+clases/data/
+projects/*/data/
+courses/*/data/
+*.db

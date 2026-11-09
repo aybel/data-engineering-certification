@@ -16,8 +16,6 @@ echo "📦 Versiones instaladas:"
 python --version
 pip --version
 git --version
-java --version
-spark-submit --version 2>/dev/null || echo "Spark disponible"
 
 # Crear directorios necesarios
 mkdir -p /workspace/{notebooks,scripts,data,projects}

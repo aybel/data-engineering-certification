@@ -1,0 +1,31 @@
+# Paquetes que el repositorio todavía no usa, o que son pesados.
+# NO se instalan en la imagen de Docker: pueden entrar en conflicto con
+# requirements.txt, así que conviene instalarlos en un entorno virtual aparte.
+#
+#   python -m venv .venv-optional
+#   source .venv-optional/bin/activate
+#   pip install -r requirements-optional.txt
+#
+# Airflow y PySpark están en courses/pipelines_python/requirements.txt.
+
+# Calidad de datos y transformación
+dbt-core==1.5.0
+great-expectations==0.16.16
+
+# Procesamiento y orquestación
+dask==2023.7.0
+prefect==2.10.0
+
+# Data warehouse y nube
+snowflake-connector-python==3.1.0
+snowflake-sqlalchemy==1.10.0
+boto3==1.28.2  # AWS
+
+# APIs
+fastapi==0.100.0
+uvicorn==0.23.1
+
+# Utilidades
+click==8.1.6
+gitpython==3.1.32
+googletrans==4.0.2
